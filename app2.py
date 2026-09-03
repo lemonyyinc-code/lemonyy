@@ -1,4 +1,3 @@
-!pip install streamlit
 # --------------------------------------------
 # 4) Streamlit 배포
 # sunspots.csv 파일이 에디터 폴더의 data/아래에 있어야 합니다.

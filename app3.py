@@ -131,14 +131,14 @@ try:
         min_value=5,
         max_value=100,
         value=10
-
+    )
     # 산점도 투명도 조절
     point_alpha = st.sidebar.slider(
         '산점도 투명도',
         min_value=0.1,
         max_value=1.0,
         value=0.5
-
+    )
 
     # 필터링된 데이터
     filtered_df = df[(df['YEAR'] >= year_range[0]) & (df['YEAR'] <= year_range[1])]

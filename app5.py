@@ -83,8 +83,7 @@ merged["residual"] = merged["y"] - merged["yhat"]
 
 # TODO: residual 시계열을 시각화하세요.
 fig4, ax2 = plt.subplots(figsize=(14, 4))
-
-ax2.plot(merged["ds"], merged["residual"], color="purple", label="Residual")
+x2.plot(merged["ds"], merged["residual"], color="purple", label="Residual", marker='o', markersize=4)
 ax2.axhline(0, color="black", linestyle="--")
 ax2.legend()
 ax2.grid(True)

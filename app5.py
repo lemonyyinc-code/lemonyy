@@ -59,19 +59,17 @@ st.subheader("📉 Custom Plot: Actual vs Predicted with Prediction Intervals")
 # TODO: 실제값, 예측값, 신뢰구간을 하나의 plot에 시각화하세요.
 fig3, ax = plt.subplots(figsize=(14, 6))
 
-ax.plot(df["ds"], df["y"], label="Actual", color="steelblue", alpha=0.6)
-ax.plot(forecast["ds"], forecast["yhat"], label="Predicted", color="red")
+ax.plot(df["ds"], df["y"], label="Actual", color="blue", marker='o', markersize=4)
+ax.plot(forecast["ds"], forecast["yhat"], label="Predicted", color="red", linestyle='--')
 ax.fill_between(forecast["ds"], forecast["yhat_lower"], forecast["yhat_upper"],
-                 color="red", alpha=0.2, label="Prediction Interval")
+                 color="pink", alpha=0.3, label="Prediction Interval")
+ax.set_title("Sunspots: Actual vs. Predicted with Prediction Intervals")
+ax.set_xlabel("Year")
+ax.set_ylabel("Sunspot Activity")
 ax.legend()
 ax.grid(True)
-# 힌트:
-# ax.plot(df["ds"], df["y"], ...)
-# ax.plot(forecast["ds"], forecast["yhat"], ...)
-# ax.fill_between(forecast["ds"], forecast["yhat_lower"], forecast["yhat_upper"], ...)
 
 st.pyplot(fig3)
-
 # ----------------------------------
 # [6] 잔차 분석 시각화
 # ----------------------------------

@@ -89,7 +89,6 @@ ax2.axhline(0, color="black", linestyle="--")
 ax2.legend()
 ax2.grid(True)
 
-st.pyplot(fig4)
 # 힌트:
 # ax2.plot(merged["ds"], merged["residual"], ...)
 # ax2.axhline(0, ...)
